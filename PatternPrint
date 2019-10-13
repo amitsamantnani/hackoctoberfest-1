@@ -11,6 +11,7 @@ till the number n is reached.
 
 #include <stdio.h>
 
+//Returns the number of digits in the number 'n'
 int countDigits(int n)
 {
 	int count = 1;
