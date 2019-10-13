@@ -1,22 +1,36 @@
 /*
 Program to print the pattern, 
-1
-12
-123
-1234
-....
-1234...n
+	1
+	12
+	123
+	1234
+	....
+	1234...n
+till the number n is reached.
 */
 
 #include <stdio.h>
+
+int countDigits(int n)
+{
+	int count = 1;
+	while ((n /= 10) != 0)  
+		count++;
+	return count;
+}
+
 int main()
 {
-  int n;
-  scanf("%d", &n);
-  
-  for(int i = 1; i <= n; i++) 
-      for(int j = 1; j <= i; j++)
-          printf("%d", j);  
+  	int n, digits = 1;
+  	printf("Number until which pattern has to be repeated: ");
+  	scanf("%d", &n);
+  	digits += countDigits(n);
+
+ 	for(int i = 1; i <= n; i++) {
+    	for(int j = 1; j <= i; j++)
+        	printf("%-*d", digits, j);  
+        printf("\n");
+	}
           
 return 0;
 }
