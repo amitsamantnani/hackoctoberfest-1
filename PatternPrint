@@ -6,7 +6,7 @@ Program to print the pattern,
 	1234
 	....
 	1234...n
-till the number n is reached.
+till the number 'n' is reached.
 */
 
 #include <stdio.h>
